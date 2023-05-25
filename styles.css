@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --green-color:rgb(11, 57, 28);
+    --green-color-2:rgb(20, 102, 50);
+    --green-color-3:rgb(34, 176, 89);
+    --green-color-trs: rgba(34, 176, 89, 0.2);
+    --celeste-color:#00c8d8ff;
+    --gray-color:rgb(236, 236, 236);
+    --orange-color:rgb(233, 123, 42);
+}
+
+body{
+    font-family: 'Raleway', sans-serif; ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: var(--green-color);
+    background-image: url(imgs/bg.png);
+    background-position: top, center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    /* height: 45em; */
+    height: 100vh;
+}
+
+/* Link active */
+
+.activelink{
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--orange-color);
+}
+
+/* Header style */
+
+.header{
+    width: 100vw;
+    padding: 0.8em;
+    position: fixed;
+    z-index: 1;
+}
+
+.header__nav {
+    display: flex;
+    background-color: var(--green-color-2);
+    border-radius: 0.8em;
+    padding: 0.5em 1em;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 110em;
+    margin: auto;
+}
+
+.header__menu, .header__close {
+    display: none;
+}
+
+.header__logo {
+    cursor: pointer;
+    width: 1.8em;
+}
+
+.header__ul{
+    display: flex;
+    list-style: none;
+}
+
+.header__li {
+    margin: 1em;
+}
+
+.header__a{
+    color:var(--orange-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all ease-in 0.2s;
+}
+
+.header__a:hover{
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--orange-color);
+}
+
+.header__social {
+    display: flex;
+    gap: 1em;
+}
+
+.social__net{
+    transition: all ease 0.2s;
+    width: 1.7em;
+}
+
+.social__net:hover{
+    transform: scale(1.2);
+}
+
+/* aguapaceba img style */
+
+.aguapacebalogo{
+    display: flex;
+    justify-content: center;
+}
+
+.aguapacebalogo> img {
+    margin-top: -3em;
+    width: 50vw;
+    min-width: 22em;
+    max-width: 45em;
+}
+
+.slide{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-color-2);
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: -2em auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1;
+}
+
+/* Cite content */
+
+.pcite{
+    margin: 5em auto 2em;
+    padding: 2em;
+    width: 80vw;
+    max-width: 80em;
+    min-width: 20em;
+    text-align: center;
+}
+
+.main__curve-one {
+    width: 100vw;
+    transform: scaleY(-1);
+    position: relative;
+    bottom: -0.3em;
+}
+
+
+/* Section Content - Misión & Visión */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5em 2em;
+    height: fit-content;
+    min-width: 20em;
+    position: relative;
+}
+
+.mision {
+    background-color: var(--gray-color);
+}
+
+.main__curve-two {
+    width: 100vw;
+    transform: scaleX(-1);
+    position: relative;
+    bottom: 0.1em;
+}
+
+.mision__h1,
+.vision__h1 {
+    font-size: 4em;
+    color: var(--orange-color);
+    font-weight: 800;
+}
+
+.mision__p,
+.vision__p,
+.historia__p {
+    text-align: justify;
+    width: 80vw;
+    max-width: 80em;
+}
+
+
+/* Historia Content */
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2em;
+    height: fit-content;
+    min-width: 20em;
+    background-color: var(--orange-color);
+}
+
