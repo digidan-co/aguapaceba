@@ -27,8 +27,8 @@ body{
     background-position: top, center;
     background-repeat: no-repeat;
     width: 100vw;
-    /* height: 45em; */
-    height: 100vh;
+    height: 45em;
+/*     height: 100vh; */
 }
 
 /* Link active */
@@ -166,10 +166,6 @@ body{
 /* Section Content - Misión & Visión */
 
 .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: auto;
     padding: 5em 2em;
     height: fit-content;
@@ -188,19 +184,34 @@ body{
     bottom: 0.1em;
 }
 
+.mision__content, .vision__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .mision__h1,
 .vision__h1 {
     font-size: 4em;
     color: var(--orange-color);
     font-weight: 800;
+    margin: auto;
+    top: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    position: absolute;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .mision__p,
 .vision__p,
 .historia__p {
     text-align: justify;
-    width: 80vw;
+    width: 30em;
     max-width: 80em;
+    margin: 2em;
 }
 
 
@@ -212,9 +223,48 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 2em;
+    padding: 1em;
     height: fit-content;
     min-width: 20em;
-    background-color: var(--orange-color);
+    background-color: var(--green-color-3);
 }
 
+.historia__h1 {
+    color: #FFF;
+    font-size: 4em;
+    font-weight: 800;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.historia__p {
+    width: 70em;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* Services Content */
+
+.servicios {
+    background-color: aqua;
+}
+
+.servicios__list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px; 
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    background-color: azure;
+}
+
+.servicios__list-servicio{
+    background-color: aliceblue;
+    width: 3em;
+    height: 3em;
+}
