@@ -501,23 +501,13 @@ body{
         background-color:rgba(11, 70, 33, 0.9);
         backdrop-filter: blur(0.4em);
     }
-
+    
     .header__ul:target ~ .header__social{
         position: absolute;
         right: 1em;
         top: 0.7em;
         display: flex;
         font-size: 1.2em
-    }
-
-    .target__close {
-        display: ;
-    }
-
-    .header__ul:target ~ .target__close{
-        position: fixed;
-        display: block;
-        z-index: 1;
     }
 
     .header__ul {
