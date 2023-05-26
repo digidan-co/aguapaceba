@@ -12,13 +12,14 @@
 }
 
 body{
-    font-family: 'Raleway', sans-serif; ;
+    font-family: 'Raleway', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .main {
@@ -110,19 +111,40 @@ body{
     transform: scale(1.2);
 }
 
-/* aguapaceba img style */
+/* aguapaceba style */
 
 .aguapacebalogo{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
-.aguapacebalogo> img {
+.aguapacebalogo__logo {
     margin-top: -3em;
     width: 50vw;
     min-width: 22em;
     max-width: 45em;
 }
+
+.resplandor {
+    animation: escalar 7s infinite ease;
+    width: 30vw;
+    min-width: 22em;
+    max-width: 45em;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+
+@keyframes escalar {
+    0% {transform: scale(1.0);}
+    50% {transform:scale(2.0);}
+    100% {transform:scale (1.0);}
+}
+
 
 .slide{
     position: relative;
@@ -205,6 +227,24 @@ body{
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.mision__img,
+.vision__img{
+    animation: movimiento 10s infinite alternate;
+}
+
+@keyframes movimiento {
+    0%{transform:translateX(10px);}
+    25%{transform:translateY(10px);}
+    50% {transform: scale(1.0);}
+    75%{transform:translateX(-5px);}
+    100%{transform:translateY(-5px);
+         transform: scale(1.0);}
+}
+
+.vision__img{
+    animation-direction: alternate-reverse;
+}
+
 .mision__p,
 .vision__p,
 .historia__p {
@@ -214,7 +254,6 @@ body{
     margin: 2em;
 }
 
-
 /* Historia Content */
 
 .historia {
@@ -223,7 +262,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 1em;
+    padding: 0.5em 0.5em 2em;
     height: fit-content;
     min-width: 20em;
     background-color: var(--green-color-3);
@@ -237,7 +276,8 @@ body{
 }
 
 .historia__p {
-    width: 70em;
+    width: 50em;
+    margin: 0.5em;
 }
 
 .bold {
@@ -247,24 +287,150 @@ body{
 /* Services Content */
 
 .servicios {
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__h1 {
+    font-size: 4em;
+    font-weight: 800;
+    color: var(--green-color-3);
+}
+
+.servicios__h2 {
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
 }
 
 .servicios__list{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px; 
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: center;
     align-items: center;
     max-width: 80vw;
-    background-color: azure;
 }
 
 .servicios__list-servicio{
-    background-color: aliceblue;
-    width: 3em;
-    height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 1.5em rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    width: 12em;
+    height: 15em;
+    transition: transform 0.3s ease;
+}
+
+.servicio__img{
+    width: fit-content;
+}
+
+.servicios__list-servicio:hover{
+    transform: scale(1.1);
+}
+
+/* Clientes Content */
+
+.clientes {
+    display: flex;
+    gap: 5em;
+    flex-direction: column;
+}
+
+.clientes__h1 {
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+    color: var(--green-color-3);
+}
+
+
+.clientes__groups { 
+    display: flex;
+    justify-content: center;
+}
+
+.clientes__box {
+    width: 50vwem;
+}
+
+.clientes__box> img{
+    width: 25em;
+}
+
+/* Contactanos Content */
+
+.contactanos {
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    background-color: var(--green-color);
+    gap: 5em;
+    border-top: var(--celeste-color) solid 5px;
+}
+
+.contactanos__datos{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: #FFF;
+}
+
+.contactanos__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 40vw;
+    min-width: 20em;
+    max-width: 50em;
+}
+
+.campo {
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border-style: none;
+    padding: 0.7em 0.7em 0.7em 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-enviar{
+    border: none;
+    background-color:var(--green-color-3);
+    width: 100%;
+    padding: 0.5em;
+    float: right;
+    font-family: DM sans;
+    font-size: 1.1em;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: var(--orange-color);
+    transition: all ease 0.5s;
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+::placeholder {
+    color: gray;
+}
+
+.footer{
+    background-color: black;
+    width: 100vw;
+    padding: 1em;
+    display: grid;
+    justify-content: center;
 }
