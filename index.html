@@ -12,9 +12,9 @@
         <header class="main__header header">
             <nav class="header__nav">
                 <img src="icons/aguapaceba.png" alt="Logo" class="header__logo">
-                <img src="icons/menu.png" alt="Menu" class="header__menu">
-                <img src="icons/close.png" alt="Close" class="header__close">
-                <ul class="header__ul">
+                <a href="#menu" class="target__open"><img src="icons/menu.png" alt="Menu" class="header__menu"></a>
+                <a href="" class="target__close"><img src="icons/close.png" alt="Close" class="header__close"></a>
+                <ul class="header__ul" id="menu">
                     <li class="header__li"><a href="#" class="header__a">Inicio</a></li>
                     <li class="header__li"><a href="#mision" class="header__a">Misión</a></li>
                     <li class="header__li"><a href="#vision" class="header__a">Visión</a></li>
@@ -24,9 +24,9 @@
                     <li class="header__li"><a href="#contactanos" class="header__a">Contactanos</a></li>
                 </ul>
                 <div class="header__social">
-                    <a href="#"><img src="icons/fb.png" class="social__net" alt="Facebook"></a>
-                    <a href="#"><img src="icons/tw.png" class="social__net" alt="Twitter"></a>
-                    <a href="#"><img src="icons/ig.png" class="social__net" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/aguapaceba.hatonuevo" target="_blank"><img src="icons/fb.png" class="social__net" alt="Facebook"></a>
+                    <a href="https://twitter.com/aguapaceba" target="_blank"><img src="icons/tw.png" class="social__net" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/aguapaceba/" target="_blank"><img src="icons/ig.png" class="social__net" alt="Instagram"></a>
                 </div>
             </nav>
         </header>
@@ -106,12 +106,16 @@
         <div id="contactanos"></div>
         <section class="contactanos">
             <div class="contactanos__datos">
-                <h1 class="h1__contactanos__h1">Contactanos</h1>
+                <h1 class="h1__contactanos">Contactanos</h1>
                 <article class="contactanos__article">
-                    <p class="contactanos__p">Estamos ubicados en la Calle 21 # 18a 53 en Hatonuevo, La Guajira, Colombia.</p>
+                    <p class="contactanos__p">Estamos ubicados en la <span class="bold">Calle 21 # 18a 53</span> en Hatonuevo, La Guajira, Colombia.</p>
                     <p class="contactanos__p"><span class="bold">Código Postal:</span> 442030</p>
                     <p class="contactanos__p"><span class="bold">Teléfonos:</span> 314 731 2792 - 314 284 1596</p>
                 </article>
+                <div class="contactanos__mapa">
+                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d244.7247316572547!2d-72.76487147133788!3d11.068907690396022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1685109028440!5m2!1ses!2sco" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
                 <span class="contactanos__span">2023 AGUAPACEBA.COM</span>
             </div>
             <div class="contactanos__formulario">
