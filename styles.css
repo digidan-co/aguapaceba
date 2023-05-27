@@ -443,6 +443,7 @@ body{
     font-size: 1.1em;
     border-radius: 7px;
     cursor: pointer;
+    font-family: 'Raleway';
 }
 
 .btn-enviar:hover {
