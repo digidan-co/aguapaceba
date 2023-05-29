@@ -128,26 +128,25 @@ body{
 }
 
 .resplandor {
-    animation: escalar 7s infinite ease alternate;
-    width: 30vw;
-    min-width: 22em;
-    max-width: 45em;
     position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background-color: #FFF;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: zoom 7s infinite ease alternate;
+    filter: blur(3em);
+    top: 5em;
     left: 0;
     right: 0;
-    margin:auto;
-    background-color:#FFF;
-    border-radius: 50%;
-    filter: blur(3em);
-    opacity: 0.2;
+    margin: auto;
 }
 
-@keyframes escalar {
+@keyframes zoom {
     0% {transform:scale(1.0);}
     50% {transform:scale(1.5);}
     100% {transform:scale(1.0);}
 }
-
 
 .slide{
     position: relative;
